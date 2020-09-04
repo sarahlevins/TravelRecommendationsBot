@@ -2,13 +2,13 @@
 
 A simple contextual chatbot built with Rasa NLU and Rasa Core
 
-You can interact with and train a version of the bot [here](http://rasaxserver.westus2.cloudapp.azure.com/guest/conversations/production/04c12d2499a541119e41c50033e6f2cc) 
+You can interact with and train the travel recommendations bot [here](https://travelrecommendationbot.herokuapp.com/) 
 
-Please note that final changes are coming shortly, and read me will be updated with guides and resources.
+This bot is a passion project and still in development. Any assistance, advice or recommendations would be welcomed
 
-## Installation
+## Simple Bot
 
-
+The simple bot is an example of a single turn 
 
 ## Usage
 
