@@ -1,0 +1,36 @@
+intents:
+  - greet
+  - holiday_request
+  - affirm
+  - deny
+
+entities:
+  - holiday_category
+
+responses:
+  utter_greet:
+  - text: "Hey! I'm travel recommendations bot. I'm here to help you decide where to go on your next holiday. What kind of trip do you want?"
+  - text: "Hello there, I am a travel recommendations bot. What kind of holiday do you want?"
+
+  utter_bye:
+  - text: "Goodbye!"
+  - text: "Bye Bye"
+  - text: "Bye! See you later!"
+
+  utter_happy_to_help:
+  - text: "I'm glad to hear you like it, happy to help"
+  - text: "I knew you'd like the sound of that."
+
+  utter_sorry_couldnt_help:
+  - text: "I'm sorry you don't like the sound of that. Did you want to try asking me again?"
+  - text: "Sorry I couldn't help. Did you want to ask me again?"
+
+  utter_ask_holiday:
+  - text: "What kind of holiday are you after?"
+
+actions:
+  - holiday_recommendation
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

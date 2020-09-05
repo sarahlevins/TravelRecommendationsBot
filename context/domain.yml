@@ -1,0 +1,143 @@
+intents:
+  - request_holiday
+  - greet
+  - goodbye
+  - inform
+  - affirm
+  - give_name
+  - deny_name
+  - deny
+  - out_of_scope
+  - thanks
+  - invite_bot
+
+entities:
+  - holiday_region
+  - holiday_season
+  - holiday_budget
+  - holiday_experience
+  - user_name
+
+responses:
+  utter_greet:
+  - text: "Hey! I'm travel recommendations bot. I'm here to help you decide where to go on your next holiday."
+  - text: "Hello there, I am a travel recommendations bot."
+
+  utter_personal_greeting:
+  - text: "Hi {user_name}"
+  - text: "Nice to meet you {user_name}!"
+
+  utter_accept_thanks:
+  - text: "My pleasure!"
+
+  utter_accept_invitation:
+  - text: "of course!"
+  - text: "I will!"
+
+  utter_continuation:
+  - text: "If you would like other recommendations let me know what else you would like to experience. Otherwise, just say goodbye!"
+
+  utter_bye:
+  - text: "Goodbye!"
+  - text: "Bye Bye"
+  - text: "Bye! See you later {user_name}!"
+
+  utter_submit:
+  - text: "Let me think..."
+
+  utter_ask_name:
+  - text: "Before we get started, what is your name?"
+  - text: "First of all, what can I call you?"
+
+  utter_ask_experience:
+  - text: >
+      What do you hope to experience while you're away?
+      Examples:
+      'Adventure'
+      'Relaxation'
+      'I want to experience new cultures'
+
+  utter_ask_budget:
+  - text: >
+      What value holiday do you want?
+      Examples:
+      'Budget'
+      'Mid-Range'
+      'Premium'
+      'Luxury'
+
+  utter_ask_region:
+  - text: >
+      What region of the world do you want to travel in?
+      Examples:
+      'Asia'
+      'Australia'
+      'New Zealand'
+      'Europe'
+
+  utter_ask_season:
+  - text: "What month of the year do you want to travel in?"
+  - text: "What month of the year do you want to go to {holiday_region}"
+
+  utter_no_worries:
+  - text: "No worries!"
+
+  utter_trial_close:
+  - text: "How does that sound?"
+  - text: "Does that sounds like something you would like?"
+
+  utter_finish_recommendation:
+  - text: "I'm so glad you like the idea of going on a {experience} holiday to {start_city}. You're going to have a great time in {region}."
+  - text: "I'm glad you like the sound of that, how exciting!"
+
+  utter_try_again:
+  - text: "No worries, let me ask you a few more questions to find something that works"
+  - text: "That's alright {user_name}. Can I ask you some more questions to help you find something else?"
+
+  utter_default:
+  - text: "I'm sorry, could you try ask that again? Try responding in a full sentence."
+
+  utter_out_of_scope:
+  - text: "I'm not able to answer that yet, sorry. Ask me about travel."
+
+  utter_ask_permission:
+  - text: "Do you mind if I ask you a few questions to find you the best option?"
+  
+forms:
+  - holiday_form
+
+actions:
+  - holiday_recommendation
+  - action_reset_slots
+
+slots:
+  experience:
+    type: unfeaturized
+    auto_fill: false
+  region:
+    type: unfeaturized
+    auto_fill: false
+  season:
+    type: unfeaturized
+    auto_fill: false
+  budget:
+    type: unfeaturized
+    auto_fill: false
+  title:
+    type: unfeaturized
+    auto_fill: false
+  description:
+    type: unfeaturized
+    auto_fill: false
+  start_city:
+    type: unfeaturized
+    auto_fill: false
+  country:
+    type: unfeaturized
+    auto_fill: false
+  user_name:
+    type: text
+
+session_config:
+  session_expiration_time: 30
+  carry_over_slots_to_new_session: true

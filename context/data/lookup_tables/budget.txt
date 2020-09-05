@@ -1,0 +1,4 @@
+budget
+mid-range
+premium
+luxury
